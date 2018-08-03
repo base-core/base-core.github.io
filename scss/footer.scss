@@ -1,0 +1,18 @@
+.company-info {
+	color: $white;
+}
+.footer-position {
+	position: relative;
+}
+
+.footer {
+	height: 85px;
+	background-color: $dark-green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
