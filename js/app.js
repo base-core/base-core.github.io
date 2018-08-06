@@ -7,6 +7,21 @@ $(document).foundation().ready(function(){
 		arrows: false,
 	});
 });
+
+// ---------- Top-bar class changing ---------- 
+
+  $(window).scroll(function(){
+    var st = $(window).scrollTop()
+    if(st > 0){
+      $('.header').addClass('menu-on-scroll');
+      $('#bcorelogo').attr('src','img/bclogodark.png')
+    }else{
+      $('.header').removeClass('menu-on-scroll');
+      $('#bcorelogo').attr('src','img/bclogo.png')
+    }
+  });
+
+// ---------- /Top-bar class changing ----------
 // ---------- PC screen blocks filler ----------
 var shapeColor = anime({
   targets: '#Group .btm-pc-left-col',

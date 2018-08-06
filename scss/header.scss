@@ -37,20 +37,16 @@ div.top-bar-padding {
     padding: 0.7rem 0rem 0.7rem 0rem;
 }
 
-.header-position {
-    position: relative;
-}
 // -------------------- /Main menu element --------------------
 
 // -------------------- Sprite classes --------------------
 .icon {
     display: inline-block;
-    width: 21px;
+    width: 26px;
     height: 18px;
-    background-image: url(../img/social.svg);
-    background-size: cover;
+    background-image: url(../img/sprite-social.svg);
     background-repeat: no-repeat;
-    margin-left: 20px;
+    margin-left: 15px;
     margin-top: 10px;
 }
 
@@ -73,7 +69,25 @@ div.top-bar-padding {
 .menu-fixed {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 5;
+    width: 100vw;
 }
 
 // -------------------- /Sprite classes --------------------
+
+
+.menu-on-scroll {
+    background-color: rgba(32, 26, 43, 0.6) !important;
+    color: $white;
+    a {
+        color: $white;
+    }
+    #button-event.button-event {
+        background-color: $black;
+        color: $white;
+    }
+    .icon {
+        background-position-y: -30px;
+    }
+}
