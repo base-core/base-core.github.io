@@ -21,6 +21,11 @@ $(document).foundation().ready(function(){
     }
   });
 
+
+  $('.burger-menu').click(function() {
+    $('.menu-right').toggleClass('active')
+  });
+
 // ---------- /Top-bar class changing ----------
 // ---------- PC screen blocks filler ----------
 var shapeColor = anime({

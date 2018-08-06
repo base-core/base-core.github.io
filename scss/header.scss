@@ -1,4 +1,6 @@
 // -------------------- Event button class --------------------
+
+
 #button-event.button-event {
     border-radius: 15px;
     padding: 5px 12px;
@@ -6,38 +8,96 @@
     background: #8fcbd1;
     width: 80px;
     height: 29px;
-    margin-right: 1rem;
-    margin-left: 2.5rem;
+}
+.top-menu{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-// -------------------- /Event button class --------------------
-// -------------------- Li dots destroy --------------------
-li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.burger-menu{
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 2;
 }
 
-// -------------------- /Li dots destroy --------------------
-// -------------------- Main menu element --------------------
-.menu-element {
-    color: $dark-green;
-    padding-right: 0px;
-    margin-top: 20px;
+
+.menu-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-grow: 2;
+
+    ul{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
 }
 
-a.a-padding {
-    padding: 0.7rem 0.7rem;
-}
-a.logo-padding {
-    padding: 0.7rem 2.5rem 0.7rem 0rem;
+.menu-on-scroll {
+    background-color: rgba(32, 26, 43, 0.6) !important;
+    color: $white;
+
+    svg path {
+        fill: $white;
+    }
+    a {
+        color: $white;
+    }
+    #button-event.button-event {
+        background-color: $black;
+        color: $white;
+    }
+    .icon {
+        background-position-y: -30px;
+    }
 }
 
-div.top-bar-padding {
-    padding: 0.7rem 0rem 0.7rem 0rem;
+
+.menu{
+     margin: 0;
 }
 
-// -------------------- /Main menu element --------------------
+@media screen and (max-width: 768px){
+    .top-menu{
+        padding: 16px 10px;
+    }
+    .burger-menu{
+        display: block;
+    }
+    .menu-right{
+        padding-top: 50px;
+        transition: transform 0.3s linear;
+        transform: translateX(100%);
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+        text-align: right;
+
+        &.active{
+            transform: translateX(0);
+        }
+    }
+    .menu{
+        flex-direction: column;
+    }
+}
+
+
+
+
 
 // -------------------- Sprite classes --------------------
 .icon {
@@ -77,17 +137,3 @@ div.top-bar-padding {
 // -------------------- /Sprite classes --------------------
 
 
-.menu-on-scroll {
-    background-color: rgba(32, 26, 43, 0.6) !important;
-    color: $white;
-    a {
-        color: $white;
-    }
-    #button-event.button-event {
-        background-color: $black;
-        color: $white;
-    }
-    .icon {
-        background-position-y: -30px;
-    }
-}
