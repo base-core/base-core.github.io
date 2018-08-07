@@ -11,6 +11,21 @@
     background: #8fcbd1;
     width: 80px;
     height: 29px;
+    margin: 0px 22px;
+
+}
+.btn-container{
+    margin: 0px 18px 0 58px;
+}
+.menu{
+    margin-right: 57px;
+    width: 576px;
+    margin-right: 58px;
+    justify-content: space-between;
+
+    a{
+        padding: 1rem 0 ;
+    }
 }
 .top-menu{
     max-width: 1200px;
@@ -29,11 +44,34 @@
     z-index: 2;
 }
 
+.a-padding{
+    transition: .2s ease-in-out;
+    position: relative;
+
+     &:after{
+        transition: .2s ease-in-out;
+        content: '';
+        position: absolute;
+        bottom: 13px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: 0;
+        background-color: #201a2b;
+    }
+    &:hover{
+        color: #201a2b;
+        
+        &:after{
+            width: 70%;
+        }
+    }
+}
 
 .menu-right{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     flex-grow: 2;
 
@@ -103,14 +141,18 @@
 
 
 // -------------------- Sprite classes --------------------
+.icos{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 146px;
+}
 .icon {
-    display: inline-block;
+    display: block;
     width: 26px;
     height: 18px;
     background-image: url(../img/sprite-social.svg);
     background-repeat: no-repeat;
-    margin-left: 15px;
-    margin-top: 10px;
 }
 
 .social-twitter {

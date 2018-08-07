@@ -207,7 +207,6 @@ cube1.add({
 
 .add({
   targets: '.box-coin',
-  delay: 1000,
   translateX: path2('x'),
   translateY: path2('y'),
   opacity: 0,
@@ -215,6 +214,7 @@ cube1.add({
 .add({
   targets: '.coin',
   opacity: 1,
+  offset: 9000,
 })
 .add({
   targets: ".coin",
