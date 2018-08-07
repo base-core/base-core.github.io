@@ -152,54 +152,78 @@ var dot2 = anime({
 });
 // ---------- /Left graph dots animation ----------
 // ---------- Conveyor animation ----------
+var lines = document.querySelectorAll('.line-translate');
 var strip = anime({
-  targets: '.line-translate',
-  translateX: '-10',
-  translateY: '10',
-  duration: 2000,
+  targets: lines,
+  translateX: '-17',
+  translateY: '9',
+  duration: 500,
   easing: 'linear',
   // direction: 'alternate',
   loop: true
 });
 
-var cube1 = anime({
-  targets: '.cube-mov1',
-  translateX: '-15',
-  translateY: '10',
-  duration: 2000,
+var cubes = document.querySelectorAll('.blue-cube');
+
+var path = anime.path('#Path-2');
+var path1 = anime.path('#Path-3');
+var path2 = anime.path('#Path-4');
+var path3 = anime.path('#Path-5');
+
+
+var controlsProgressEl = document.querySelector('.progress');
+
+var cube1 = anime.timeline({
   easing: 'linear',
-  loop: true
+  loop: true,
+  // update: function(anim) {
+  //   controlsProgressEl.value = anim.progress;
+  // }
 });
-var cube1 = anime({
-  targets: '.cube-mov2',
-  translateY: '30',
-  duration: 2000,
-  easing: 'linear',
-  direction: 'alternate',
-  loop: true
-});
-var cube1 = anime({
-  targets: '.cube-mov3',
-  translateX: '-15',
-  translateY: '10',
-  duration: 2000,
-  easing: 'linear',
-  loop: true
-});
-var cube1 = anime({
-  targets: '.cube-mov4',
-  translateX: '-15',
-  translateY: '10',
-  duration: 2000,
-  easing: 'linear',
-  loop: true
-});
-var cube1 = anime({
-  targets: '.cube-mov5',
-  translateX: '-15',
-  translateY: '10',
-  duration: 2000,
-  easing: 'linear',
-  loop: true
-});
+
+cube1.add({
+  targets: ".cube",
+  opacity: 1,
+}).add({
+  targets: ".cube",
+  translateX: path('x'),
+  translateY: path('y'),
+  duration: 4500
+})
+.add({
+  targets: '#box-cube',
+  opacity: 1,
+  translateX: path1('x'),
+  translateY: path1('y'),
+})
+.add({
+  targets: '#box-cube',
+  opacity: 0,
+})
+.add({
+  targets: '.box-coin',
+  opacity: 1,
+})
+
+.add({
+  targets: '.box-coin',
+  delay: 1000,
+  translateX: path2('x'),
+  translateY: path2('y'),
+  opacity: 0,
+})
+.add({
+  targets: '.coin',
+  opacity: 1,
+})
+.add({
+  targets: ".coin",
+  translateX: path3('x'),
+  translateY: path3('y'),
+  duration: 9000,
+}).add({
+  targets: ".coin",
+  offset: 18000,
+  opacity: 0,
+})
 // ---------- /Conveyor animation ----------
