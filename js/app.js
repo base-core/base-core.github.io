@@ -173,57 +173,125 @@ var path3 = anime.path('#Path-5');
 
 var controlsProgressEl = document.querySelector('.progress');
 
-var cube1 = anime.timeline({
-  easing: 'linear',
-  loop: true,
+function moveCubes(cube, coin, boxCube, boxCoin){
+  anime.timeline({
+    easing: 'linear',
+    loop: true,
+    // update: function(anim) {
+    //   console.log('current time : ' + Math.round(anim.currentTime) + 'ms');
+    // },
+    // update: function(anim) {
+    //   controlsProgressEl.value = anim.progress;
+    // }
+  })
+
+  .add({
+    targets: cube,
+    opacity: 1,
+  })
+  .add({
+    targets: cube,
+    translateX: path('x'),
+    translateY: path('y'),
+    duration: 4500
+  })
+  .add({
+    targets: boxCube,
+    opacity: 1,
+    translateX: path1('x'),
+    translateY: path1('y'),
+  })
+  .add({
+    targets: boxCube,
+    opacity: 0,
+  })
+  .add({
+    targets: boxCoin,
+    opacity: 1,
+  })
+  .add({
+    targets: boxCoin,
+    translateX: path2('x'),
+    translateY: path2('y'),
+    opacity: 0,
+  })
+  .add({
+    targets: coin,
+    opacity: 1,
+    offset: 9000,
+  })
+  .add({
+    targets: coin,
+    translateX: path3('x'),
+    translateY: path3('y'),
+    duration: 9000,
+  })
+  .add({
+    targets: coin,
+    offset: 18000,
+    opacity: 0,
+  })
+}
+
+// var cube1 = anime.timeline({
+//   easing: 'linear',
+//   loop: true,
   // update: function(anim) {
   //   controlsProgressEl.value = anim.progress;
   // }
-});
+// });
+setTimeout(moveCubes, 8000, '.cube1', '.coin1', '.box-cube1', '.box-coin1')
+moveCubes('.cube', '.coin', '.box-cube', '.box-coin')
 
-cube1.add({
-  targets: ".cube",
-  opacity: 1,
-}).add({
-  targets: ".cube",
-  translateX: path('x'),
-  translateY: path('y'),
-  duration: 4500
-})
-.add({
-  targets: '#box-cube',
-  opacity: 1,
-  translateX: path1('x'),
-  translateY: path1('y'),
-})
-.add({
-  targets: '#box-cube',
-  opacity: 0,
-})
-.add({
-  targets: '.box-coin',
-  opacity: 1,
-})
 
-.add({
-  targets: '.box-coin',
-  translateX: path2('x'),
-  translateY: path2('y'),
-  opacity: 0,
-})
-.add({
-  targets: '.coin',
-  opacity: 1,
-  offset: 9000,
-})
-.add({
-  targets: ".coin",
-  translateX: path3('x'),
-  translateY: path3('y'),
-  duration: 9000,
-}).add({
-  targets: ".coin",
-  offset: 18000,
-  opacity: 0,
-})
+// cube1.add({
+//   targets: ".cube",
+//   opacity: 1,
+// })
+// .add({
+//   targets: ".cube",
+//   translateX: path('x'),
+//   translateY: path('y'),
+//   duration: 4500
+// })
+// .add({
+//   targets: '#box-cube',
+//   opacity: 1,
+//   translateX: path1('x'),
+//   translateY: path1('y'),
+// })
+// .add({
+//   targets: '#box-cube',
+//   opacity: 0,
+// })
+// .add({
+//   targets: '.box-coin',
+//   opacity: 1,
+// })
+// .add({
+//   targets: '.box-coin',
+//   translateX: path2('x'),
+//   translateY: path2('y'),
+//   opacity: 0,
+// })
+// .add({
+//   targets: '.coin',
+//   opacity: 1,
+//   offset: 9000,
+// })
+// .add({
+//   targets: ".coin",
+//   translateX: path3('x'),
+//   translateY: path3('y'),
+//   duration: 9000,
+// })
+// .add({
+//   targets: ".coin",
+//   offset: 18000,
+//   opacity: 0,
+// })
+
+
+
+
 // ---------- /Conveyor animation ----------
