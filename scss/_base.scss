@@ -101,12 +101,20 @@ h4 {
 .team-photo-block {
     background: url(../img/team.png);
     background-size: cover;
+    position: relative;
+
 }
+.--team-z-index {
+	z-index: 1;
+	position: relative;    	
+    }
 
 .img-overlay {
     background-color: #0195a1;
     opacity: 0.4;
-    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
 }
 
 .ceo-block {
