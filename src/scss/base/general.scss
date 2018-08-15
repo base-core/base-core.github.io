@@ -1,6 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:700');
+
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
+	color: $black;
+}
+h1{
+	font-size: $h1fsize;
+}
+h2{
+	font-size: $h2fsize;
+}
+h3{
+	font-size: $h3fsize;
+}
+
+
+.--bold{
+	font-weight: 700;
+}
+.--regular{
+	font-weight: 400;
+}
+.--pink{
+	color: #ef5777;
+}
+.--mono{
+	font-family: 'Roboto Mono', monospace;
 }
