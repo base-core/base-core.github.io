@@ -1,9 +1,37 @@
+.header {
+	background-color: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+
+}
+
   .top-menu {
-  	max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0px;
-    margin: 0 auto;
+    padding: 20px 0px;
     flex-wrap: wrap;
 }
+
+.menu-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+	width: 
+    flex-grow: 2;
+
+    ul{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+}
+
