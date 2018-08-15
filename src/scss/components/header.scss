@@ -24,7 +24,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-	width: 
     flex-grow: 2;
 
     ul{
@@ -35,3 +34,53 @@
     }
 }
 
+.menu-element {
+	margin: 13px;
+	
+
+	a {
+		text-decoration: none;
+		color: $black;
+	}
+}
+
+.header-buttons {
+	a{
+	text-decoration: none;
+		color: $primary;	
+	}
+}
+
+.header-button {
+	margin: 13px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 146px;
+}
+.icon {
+    display: block;
+    width: 26px;
+    height: 18px;
+    background-image: "../../img/social.svg";
+    background-repeat: no-repeat;
+}
+
+.social-twitter {
+    background-position-x: 0px;
+}
+
+.social-telegram {
+    background-position-x: -40px;
+}
+
+.social-github {
+    background-position-x: -80px;
+}
+
+.social-medium {
+    background-position-x: -120px;
+}
