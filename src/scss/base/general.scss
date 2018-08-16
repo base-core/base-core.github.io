@@ -16,7 +16,14 @@ h2{
 h3{
 	font-size: $h3fsize;
 }
+h4{
+	font-size: $h4fsize;
+	text-transform: uppercase;
+}
 
+p {
+	margin: 0;
+}
 
 .wrapper {
 	width: 1200px;
@@ -44,4 +51,10 @@ h3{
 }
 .--primary{
 	color: $primary;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
