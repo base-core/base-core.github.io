@@ -1,0 +1,65 @@
+.footer {
+    a {
+        text-decoration: none;
+        color: $black;
+        background-color: $light-white;
+    }
+
+    i {
+    	display: inline-block;
+    	margin-right: 15px;
+    }
+}
+
+.footer-logo {
+	margin-bottom: 20px;
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer--margin {
+    li:not(:last-child) {
+    	margin-bottom: 15px; 
+    } 
+	margin: 0 25px 25px 20px;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0 100px;
+}
+
+p.form-row {
+	margin: 0;
+}
+
+.form-row {
+	display: block;
+}
+
+.input-join {
+	width: 300px;
+	border-radius: 5px;
+	border: 1px solid #201a2b;
+	box-sizing: border-box;
+	padding: 8px 46px;
+	background: url('../img/mail-logo.svg') no-repeat 10px center;
+	margin-bottom: 10px;
+}
+
+.btn-join {
+	border-radius: 5px;
+	border: 1px solid #0195a1;
+	background-color: #0195a1;
+	padding: 8px 22px;
+	color: $white;	
+}
+
+.form__subscribe {
+	margin-bottom: 75px;
+
+}
