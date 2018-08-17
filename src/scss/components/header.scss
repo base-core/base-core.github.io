@@ -76,7 +76,22 @@
 
 .header-button {
 	margin: 23px 23px 23px 4px;
-
+    position: relative;
+    &:after{
+        transition: 0.2s;
+        content: '';
+        position: absolute;
+        bottom: -26px;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background: #000;
+    }
+    &:hover{
+        &:after{
+            width: 100%;
+        }
+    }
 }
 
 .icons-container{

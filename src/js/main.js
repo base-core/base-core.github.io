@@ -49,7 +49,7 @@ $(function () {
             menu = target;
         $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
+            'scrollTop': $target.offset().top - 70
         }, 500, 'swing', function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
