@@ -19,19 +19,38 @@
 .features__item{
 	width: 380px;
 	max-width: 90vw;
-	min-height: 484px;
+	min-height: 490px;
 	border: 1px solid #e1e1e1;
 	background-color: #f9f9f9;
 	box-sizing: border-box;
 	padding: 50px 40px 30px;
+
+	&:hover{
+		.item__img img{
+			width: 0;
+			height: 0;
+		}
+		.item__description{
+			opacity: 1;
+		}
+	}
 	
 	&:nth-child(2){
 		margin: 0px 30px;
 	}
 	.item__img{
+		img{
+			width: 204px;
+    		height: 229px;
+			transition: 0.3s ease-in-out;
+		}
 		margin-bottom: 69px;
 	}
 	.item__title{
 		margin-bottom: 15px;
+	}
+	.item__description{
+		transition: 0.3s ease-in-out;
+		opacity: 0;
 	}
 }
