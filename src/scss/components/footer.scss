@@ -30,7 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 50px 0 100px;
+    padding: 50px 0 25px;
 }
 .form-row {
 	display: block;
@@ -52,6 +52,7 @@
 	background-color: #0195a1;
 	padding: 8px 22px;
 	color: $white;	
+    cursor: pointer;
 }
 
 .form__subscribe {
