@@ -1,57 +1,63 @@
 .header {
-	background-color: $white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-    border-bottom: 1px solid  #d8d8d8;
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    border-bottom: 1px solid #d8d8d8;
     z-index: 2;
 }
 
 .main-logo {
-	flex: 0 0;
-	margin-right: 68px;
+    flex: 0 0;
+    margin-right: 68px;
 }
 
- .top-menu {
+.top-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.menu-right{
+.menu-right {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex: 1 0;
 
 
-    ul{
+    ul {
         display: flex;
         margin: 0;
         padding: 0;
         list-style-type: none;
     }
 }
-.menu-right__container{
+
+.menu-right__container {
     display: flex;
     align-items: center;
 }
-.header-btn-container{
+
+.header-btn-container {
     font-weight: bold;
+    a {
+        text-decoration: none;
+        color: $primary;
+    }
 }
 
 .menu {
     width: 490px;
-	justify-content: space-between;
+    justify-content: space-between;
 }
 
 .menu-element {
-	margin: 25px 0;
-    &.active{
+    margin: 25px 0;
+    &.active {
         position: relative;
-        &:after{
+        &:after {
             content: '';
             position: absolute;
             bottom: -26px;
@@ -61,30 +67,23 @@
             background: $dark-black;
         }
     }
-	a {
-		text-decoration: none;
-		color: $black;
-	}
-}
-
-.header-btn-container {
-	a{
-	text-decoration: none;
-		color: $primary;	
-	}
+    a {
+        text-decoration: none;
+        color: $black;
+    }
 }
 
 .header-button {
-	margin: 23px 23px 23px 4px;
-
+    margin: 23px 23px 23px 4px;
 }
 
-.icons-container{
+.icons-container {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
     width: 148px;
 }
+
 .icon {
     display: block;
     width: 26px;
