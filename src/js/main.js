@@ -40,16 +40,16 @@ $(function () {
         e.preventDefault();
         $(document).off("scroll");
         
-        $('a').each(function () {
-            $(this).removeClass('active');
+        $('.menu li').each(function () {
+            $(this).parent().removeClass('active');
         })
         $(this).addClass('active');
       
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
+        var target = this.hash;
+        var menu = target;
+        var $target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - 70
+            'scrollTop': $target.offset().top;
         }, 500, 'swing', function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
