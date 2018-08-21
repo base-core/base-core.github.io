@@ -42,7 +42,7 @@ var config = {
     },
     tunnel: true,
     host: 'localhost',
-    port: 8080,
+    port: 8085,
     logPrefix: "basecore"
 };
 
