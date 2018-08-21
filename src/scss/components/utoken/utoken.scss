@@ -6,18 +6,69 @@
 
 // Token distribution block
 .distribution-container {
-	padding: 10px 0px 100px;
-	text-align: center;
+    padding: 50px 0px 100px;
+    text-align: center;
 }
 
 .distribution__image {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .distribution__info {
-	text-align: left;
+    text-align: left;
 }
 
 .distribution--item {
-	margin-top: 10px;
+    margin-top: 10px;
+}
+
+// Allocation block
+.allocation {
+    background-color: #cceaed;
+}
+
+.allocation-container {
+    padding: 50px 0px 100px;
+    text-align: center;
+}
+
+.allocation-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.allocation__diagram__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.diagram__circle {
+    margin-right: 14px;
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+
+.diagram__info {
+    margin-right: 54px;
+    &:not(:first-child) {
+        margin-top: 36px;
+    }
+}
+
+.h4-tokens {
+    text-align: right;
+}
+
+.__percent {
+    margin-right: 25px;
+    &:not(:first-child) {
+        margin-top: 36px;
+    }
+}
+
+.__tokens:not(:first-child) {
+    margin-top: 36px;
 }
