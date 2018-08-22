@@ -22,7 +22,6 @@ h3 {
 
 h4 {
     font-size: $h4fsize;
-    text-transform: uppercase;
 }
 
 p {
@@ -61,6 +60,10 @@ p {
 
 .--primary {
     color: $primary;
+}
+
+.--margin-bot {
+    margin-bottom: 50px;
 }
 
 .--uppercase {
