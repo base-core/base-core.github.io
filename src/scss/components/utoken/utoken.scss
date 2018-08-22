@@ -132,3 +132,18 @@
         align-items: center;
     }
 }
+
+
+// ---------- Roadmap ----------
+
+.roadmap {
+	background-image: url('../img/roadmap-background.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 120vh;
+}
+
+.roadmap-container {
+	 padding: 50px 0px 100px;
+    text-align: center;
+}
