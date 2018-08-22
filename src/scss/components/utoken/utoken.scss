@@ -72,61 +72,61 @@
 .__tokens:not(:first-child) {
     margin-top: 36px;
 }
+
 // ---------- Purchase ----------
 .purchase {
-	background-color: #f9fbfd;
+    background-color: #f9fbfd;
 }
 
 .purchase-container {
-	padding: 50px 0px 100px;
-	text-align: center;
-
+    padding: 50px 0px 100px;
+    text-align: center;
 }
 
 .purchase--content {
-	border: 1px solid #e1e1e1;
-	background-color: $white;
-	text-align: left;
-	padding: 50px 50px;
+    border: 1px solid #e1e1e1;
+    background-color: $white;
+    text-align: left;
+    padding: 50px 50px;
 }
 
 .grey-frame {
-	border: 1px solid #e1e1e1;
-	background-color: #f9f9f9; 
-	padding: 9px 19px;
+    border: 1px solid #e1e1e1;
+    background-color: #f9f9f9;
+    padding: 9px 19px;
 }
 
 .official-exchange {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	.--exchange {
-		width: 225px;
-		height: 63px;
-		border: 1px solid #e1e1e1;
-		background-color: #ffffff;
-		margin-right: 25px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+    .--exchange {
+        width: 225px;
+        height: 63px;
+        border: 1px solid #e1e1e1;
+        background-color: #ffffff;
+        margin-right: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .official-wallet {
-	margin-top: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	.--wallet {
-		width: 159px;
-		height: 159px;
-		border: 1px solid #e1e1e1;
-		background-color: #ffffff;
-		margin-right: 25px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+    .--wallet {
+        width: 159px;
+        height: 159px;
+        border: 1px solid #e1e1e1;
+        background-color: #ffffff;
+        margin-right: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
