@@ -1,0 +1,24 @@
+.company-info {
+	color: $white;
+}
+.footer-position {
+	&:before{
+		content: '';
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.footer-position .footer {
+	margin-top: 100px;
+	width: 100%;
+	height: 85px;
+	background-color: $dark-green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
