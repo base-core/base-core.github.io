@@ -1,0 +1,40 @@
+.banner{
+	padding-top: 70px;
+	background: url("../img/homePage.jpg") center center no-repeat;
+	background-size: cover;
+	text-align: center;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+.banner__img{
+	margin-top: 80px;
+	svg{
+		margin: 0 auto;
+	}
+}
+.banner__title{
+	margin-top: 13px;
+}
+.banner__btn-container{
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+.banner__btn{
+	width: 201px;
+	height: 34px;
+	border-radius: 5px;
+	background-color: $dark-grey;
+	text-align: center;
+	padding: 8px;
+	color: $white;
+	display: block;
+	text-decoration: none;
+	box-sizing: border-box;
+	margin: 6px 13px;
+}
+.banner__notification{
+	margin: 70px 0px;
+}
