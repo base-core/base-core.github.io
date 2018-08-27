@@ -80,5 +80,28 @@ ul {
     .wrapper {
         width: 1000px;
     }
-    $footerfsize: 13px;
+    body {
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 13px;
+    }
+    .features .features__item {
+        font-size: 13px;
+    }
+    .footer .footer-right {
+        font-size: 13px;
+    }
+    .footer .company-info {
+        font-size: 13px;
+    }
 }
