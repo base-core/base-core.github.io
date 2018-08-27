@@ -85,3 +85,13 @@ a.sprite {
     .soc-fbook {background-position-y: -238px;}
     .soc-ln {background-position-y: -272px;}
     .soc-inst {background-position-y: -306px;}
+
+// ---------- ADAPTIVE ----------
+@media screen and (max-width: 1440px) {
+    .footer .company-info {
+        font-size: 13px;
+    }
+    .footer .footer-right {
+        font-size: 13px;
+    }
+}
