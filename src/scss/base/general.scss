@@ -75,3 +75,10 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+@media screen and (max-width: 1440px) {
+    .wrapper {
+        width: 1000px;
+    }
+    $footerfsize: 13px;
+}
