@@ -48,3 +48,9 @@
     width: 700px;
     height: 453px;
 }
+
+@media screen and (max-width: 1440px) {
+	#banner-image {
+		width: 513px;
+	}
+}
