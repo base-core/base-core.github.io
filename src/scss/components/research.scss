@@ -38,6 +38,11 @@
 
 // ---------- ADAPTIVE ----------
 @media screen and (max-width: 1440px) {
+    .research__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
     .research--picture {
         max-width: 223px;
     }
@@ -47,7 +52,7 @@
         max-width: 90vw;
         min-height: 320px;
         box-sizing: border-box;
-        padding: 50px 40px 5px;
+        padding: 50px 0px 5px;
 
         &:not(:last-child) {
             margin-right: 75px;
