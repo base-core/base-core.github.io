@@ -55,4 +55,15 @@ $(function () {
             $(document).on("scroll", onScroll);
         });
     });
+
+
+    if (window.innerWidth <= 425) {
+    	$('.features__list').slick({
+    		slidesToShow: 1	,
+    		slidesToScroll: 1,
+    		arrows: false,
+    		loop: true,
+    		centerMode: true,
+    	})
+    }
 })

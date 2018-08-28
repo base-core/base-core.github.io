@@ -67,45 +67,54 @@
 // ---------- ADAPTIVE ----------
 @media screen and (max-width: 1440px) {
     .features .features__item {
-    font-size: 13px;
-    width: 268px;
-    max-width: 90vw;
-    height: 341px;
-    border: 1px solid #e1e1e1;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-    padding: 50px 40px 30px;
-    overflow: hidden;
-    transition: .3s ease-in-out;
+        font-size: 13px;
+        width: 268px;
+        max-width: 90vw;
+        height: 341px;
+        border: 1px solid #e1e1e1;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+        padding: 50px 40px 30px;
+        overflow: hidden;
+        transition: .3s ease-in-out;
 
-    &:hover {
-        padding-top: 45px;
-        .item__img img {
-            width: 91px;
-            height: 100px;
+        &:hover {
+            padding-top: 45px;
+            .item__img img {
+                width: 91px;
+                height: 100px;
+            }
+            .item__description {
+                opacity: 1;
+            }
+        }
+
+        &:nth-child(2) {
+            margin: 0px 30px;
+        }
+        .item__img {
+            img {
+                width: 123px;
+                height: 138px;
+                transition: 0.3s ease-in-out;
+            }
+            margin-bottom: 60px;
+        }
+        .item__title {
+            margin-bottom: 15px;
         }
         .item__description {
-            opacity: 1;
-        }
-    }
-
-    &:nth-child(2) {
-        margin: 0px 30px;
-    }
-    .item__img {
-        img {
-            width: 123px;
-            height: 138px;
             transition: 0.3s ease-in-out;
+            opacity: 0;
         }
-        margin-bottom: 60px;
-    }
-    .item__title {
-        margin-bottom: 15px;
-    }
-    .item__description {
-        transition: 0.3s ease-in-out;
-        opacity: 0;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .features__list{
+        flex-wrap: wrap;
+    }
+    .features__item {
+        margin: 0px 5px !important;
+    }
 }
