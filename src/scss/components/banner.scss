@@ -61,3 +61,19 @@
         margin-top: 0px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    #banner-image {
+        width: 300px;
+    }
+
+    .banner__img {
+        margin-top: -65px;
+        svg {
+            margin: 0 auto;
+        }
+    }
+    .banner__title {
+        margin-top: -90px;
+    }
+}
