@@ -4,6 +4,58 @@
     justify-content: space-between;
 }
 
+// ---------- Banner ----------
+.banner--utoken {
+    padding-top: 70px;
+    background-image: linear-gradient(135deg, rgba(254, 254, 254, 0.05) 0%, rgba(133, 143, 166, 0.15) 100%);
+    background-size: cover;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.banner__img--utoken {
+    margin-top: 30px;
+    svg {
+        margin: 0 auto;
+    }
+}
+
+.banner__title--utoken {
+    margin-top: 30px;
+}
+
+.banner__btn-container--utoken {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner__btn--utoken {
+    width: 201px;
+    height: 34px;
+    border-radius: 5px;
+    background-color: $dark-grey;
+    text-align: center;
+    padding: 8px;
+    color: $white;
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 6px 13px;
+}
+
+.banner__notification--utoken {
+    margin: 25px 0px;
+}
+
+#utoken-hp-image {
+    width: 700px;
+    height: 522px;
+}
+
 // ---------- Token distribution block ----------
 .distribution-container {
     padding: 50px 0px 100px;
@@ -87,11 +139,11 @@
     border: 1px solid #e1e1e1;
     background-color: $white;
     text-align: left;
-    padding: 50px 50px;
+    padding: 50px 25px 50px 25px;
 }
 
 .grey-frame {
-	display: inline-block;
+    display: inline-block;
     width: auto;
     border: 1px solid #e1e1e1;
     background-color: #f9f9f9;
@@ -135,15 +187,58 @@
 
 
 // ---------- Roadmap ----------
-
 .roadmap {
-	background-image: url('../img/roadmap-background.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 120vh;
+    background-image: url('../img/roadmap-background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
 }
 
 .roadmap-container {
-	 padding: 50px 0px 100px;
+    padding: 50px 0px 100px;
     text-align: center;
+}
+
+// ---------- ADAPTIVE ----------
+@media screen and (max-width: 1440px) {
+    #utoken-hp-image {
+        width: 500px;
+    }
+
+    .banner--utoken {
+        padding-top: 20px;
+        background-image: linear-gradient(135deg, rgba(254, 254, 254, 0.05) 0%, rgba(133, 143, 166, 0.15) 100%);
+        background-size: cover;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .banner__img--utoken {
+        margin-top: 10px;
+        svg {
+            margin: 0 auto;
+        }
+    }
+
+    .banner__title--utoken {
+        margin-top: -10px;
+    }
+    .banner__notification--utoken {
+        margin: 15px 0px;
+    }
+
+    .menu__utoken {
+        display: none;
+        width: 0px;
+    }
+
+    .distribution__image {
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
 }
