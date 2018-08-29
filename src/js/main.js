@@ -57,9 +57,10 @@ $(function () {
     });
     
 // ---------- MEDIUM INTEGRATION API ---------- 
-    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40BaseCore', function(data) {
-        console.log(data);
-        data.items.forEach( function(element, index) {
+    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40avocodecom', function(data) {
+        var articles = data.items.slice(0, 3);
+        console.log(articles)
+        articles.forEach( function(element, index) {
             $('.medium__container').append(`<a target="_blank" href="${element.link}" class="medium__publication">
                 <div class="medium__publication__photo"><img width="318px" src="${element.thumbnail}"></div>
                 <div class="medium__publication__header">
