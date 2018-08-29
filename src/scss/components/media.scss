@@ -27,7 +27,7 @@
 .medium__container {
     padding: 30px 0px 30px 0px;
 	display: flex;
-	align-items: center;
+    flex-wrap: wrap;
 	justify-content: space-between;
 	text-align: left;
 	h4 {
@@ -38,4 +38,11 @@
 		padding: 0px 80px 0px 0px
 	}
 
+}
+.medium__publication{
+    width: 318px;
+    margin: 20px 0px;
+    img{
+        width: 100%;
+    }
 }

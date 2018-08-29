@@ -55,6 +55,20 @@ $(function () {
             $(document).on("scroll", onScroll);
         });
     });
+    
+
+    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40BaseCore', function(data) {
+        data.items.forEach( function(element, index) {
+            $('.medium__container').append(`<div class="medium__publication">
+                <div class="medium__publication__photo"><img width="318px" src="${element.thumbnail}"></div>
+                <div class="medium__publication__header">
+                    <h4>${element.title}</h4></div>
+                <div class="medium__publication__article">
+                    <p>${ element.description.split('p>')[1].split('.')[0].substr(0, 100)}</p>
+                </div>
+            </div>`)
+        });
+    });
 
 
     if (window.innerWidth <= 425) {
