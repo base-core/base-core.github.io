@@ -57,18 +57,20 @@ $(function () {
     });
     
 // ---------- MEDIUM INTEGRATION API ---------- 
-    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40avocodecom', function(data) {
+    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40BaseCore', function(data) {
         var articles = data.items.slice(0, 3);
-        console.log(articles)
         articles.forEach( function(element, index) {
-            $('.medium__container').append(`<a target="_blank" href="${element.link}" class="medium__publication">
+            let description = element.description.split('p>')[1].split('</p')[0].substr(0, 100);
+            description = description.substring(0, description.lastIndexOf(" "));
+
+            $('.medium__container').append(`<div class="medium__publication">
                 <div class="medium__publication__photo"><img width="318px" src="${element.thumbnail}"></div>
-                <div class="medium__publication__header">
-                    <h4>${element.title}</h4></div>
+                <h4><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
                 <div class="medium__publication__article">
-                    <p>${ element.description.split('p>')[1].split('.')[0].substr(0, 100)}</p>
+                    <p>${description}</p>
+                    <p><a class="details" target="_blank" href="${element.link}">Read more..</a></p>
                 </div>
-            </a>`)
+            </div>`)
         });
     });
 
