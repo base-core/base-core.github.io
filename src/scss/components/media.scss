@@ -42,6 +42,9 @@
 .medium__publication{
     width: 318px;
     margin: 20px 0px;
+    display: block;
+    color: $black;
+    text-decoration: none;
     img{
         width: 100%;
     }
