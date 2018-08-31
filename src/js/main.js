@@ -65,8 +65,8 @@ $(function () {
 
             $('.medium__container').append(`<div class="medium__publication">
                 <div class="medium__publication__photo"><img width="318px" src="${element.thumbnail}"></div>
-                <h4><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
-                <div class="medium__publication__article">
+                <h4 class="--medium-margin"><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
+                <div class="medium__publication__article --medium-margin">
                     <p>${description}</p>
                     <p><a class="details" target="_blank" href="${element.link}">Read more..</a></p>
                 </div>
