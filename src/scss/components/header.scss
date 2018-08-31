@@ -8,6 +8,10 @@
     z-index: 2;
     font-size: $headerfsize;
 }
+#burger-king {
+    display: none;
+    cursor: pointer;
+}
 
 .main-logo {
     flex: 0 0;
@@ -140,5 +144,44 @@
     }
     .menu {
         width: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #burger-king {
+        display: block;
+    }
+    .top-menu {
+        padding: 10px 0px 20px;
+        overflow: hidden;
+        height: 25px;
+        transition: 0.3s ease-in-out;
+        &.active {
+            height: 125px;
+
+        }
+    }
+    .main-logo {
+        display: flex;
+        flex: 1 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 0px;
+    }
+    .header-button {
+    margin: 10px 37px 20px 0px;
+    }
+    .homebtn {
+        display: block;
+    }
+    .menu-element {
+        display: none;
+    }
+    .menu {
+        width: 0px;
+    }
+    .menu-right__container {
+        flex-wrap: wrap;
+        align-items: left;
     }
 }

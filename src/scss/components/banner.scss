@@ -31,13 +31,15 @@
     height: 34px;
     border-radius: 5px;
     background-color: $dark-grey;
-    text-align: center;
     padding: 8px;
     color: $white;
     display: block;
     text-decoration: none;
     box-sizing: border-box;
     margin: 6px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner__notification {
