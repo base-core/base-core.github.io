@@ -32,8 +32,16 @@
 // ---------- ADAPTIVE ----------
 @media screen and (max-width: 375px) {
     .whitepaper-container {
-    padding: 5px 0px 50px;
-}
+        padding: 5px 0px 50px;
+    }
+    .wp-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wp-image {
+            width: 220px;
+        }
+    }
     .wp-content {
         flex-wrap: wrap;
     }
@@ -41,5 +49,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .wp__notification {
+        text-align: center;
     }
 }
