@@ -63,10 +63,10 @@ $(function () {
             let description = element.description.split('p>')[1].split('</p')[0].substr(0, 100);
             description = description.substring(0, description.lastIndexOf(" "));
 
-            $('.medium__container').append(`<div class="medium__publication">
+            $('.medium__container').append(`<div class="medium__publication --medium-padding">
                 <div class="medium__publication__photo"><img width="318px" src="${element.thumbnail}"></div>
-                <h4 class="--medium-margin"><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
-                <div class="medium__publication__article --medium-margin">
+                <h4><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
+                <div class="medium__publication__article">
                     <p>${description}</p>
                     <p><a class="details" target="_blank" href="${element.link}">Read more..</a></p>
                 </div>
