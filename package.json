@@ -1,34 +1,39 @@
 {
-  "name": "foundation-sites-template",
+  "name": "base-core.github.io",
   "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp sass"
-  },
-  "author": "ZURB <foundation@zurb.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
-  },
+  "description": "",
+  "main": "index.js",
   "dependencies": {
+<<<<<<< HEAD
     "foundation-sites": "~6.4.0",
     "jquery": ">=3.0.0",
     "motion-ui": "~1.2.2",
     "node-sass": "^4.9.3",
     "what-input": "^4.1.3"
+=======
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.1",
+    "rimraf": "^2.6.2"
+>>>>>>> c6add349ca186b632aa18facd668911155f95460
   },
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-sass": "^2.1.0"
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "git+https://github.com/base-core/base-core.github.io.git"
   },
-  "private": true
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/base-core/base-core.github.io/issues"
+  },
+  "homepage": "https://github.com/base-core/base-core.github.io#readme"
 }
