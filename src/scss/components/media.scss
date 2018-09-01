@@ -31,7 +31,7 @@
     padding: 30px 0px 30px 0px;
 	display: flex;
     flex-wrap: wrap;
-	justify-content: space-between;
+	// justify-content: space-between;
 	text-align: left;
 	h4 {
 		font-size: 20px;
@@ -66,14 +66,38 @@
        }
     }
 }
+.publication__title{
+    min-height: 70px;
+}
+.about_team__photo {
+    width: 656px;
+}
+.about_team__info{
+    p{
+        margin: 20px 0px;
+    }
+    a{
+        color: $black;
+        text-decoration: none;
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+.about_team__text p a {
+    color: $primary;
 
+    &:hover{
+        text-decoration: underline;
+    }
+}
 
 // ---------- ADAPTIVE ----------
 @media screen and (max-width: 375px) {
 	.about_team {
 		flex-wrap: wrap;
 		.about_team__photo {
-			max-width: 300px;
+			max-width: 100%;
 		}
 		.about_team__info {
 			padding: 0px 80px 0px 0px;
