@@ -112,9 +112,19 @@ $(function () {
     	})
     }
 // ---------- BURGER KING MENU ----------
-$('#burger-king').click(function(event){
-    $('.top-menu').toggleClass('active')
-})
+    $('#burger-king').click(function(event){
+        $('.top-menu').toggleClass('active')
+    })
+
+
+    // footer slids
+    $('.footer__list').each(function(index, el) {
+        $(this).find('ul').slideUp(1)
+    });
+
+    $('.footer__list h4').click(function(){
+        $(this).siblings('ul').slideToggle(400);
+    })
 
 })
 
