@@ -3,65 +3,64 @@
 //= banner-animation.js
 
 $('.slider-for').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	fade: true,
-	asNavFor: '.slider-nav'
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
-	slidesToShow: 5,
-	slidesToScroll: 1,
-	asNavFor: '.slider-for',
-	arrows: false,
-	focusOnSelect: true
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    arrows: false,
+    focusOnSelect: true
 });
 
-$(function () {
+$(function() {
 
-	function onScroll(event){
-	    var scrollPos = $(document).scrollTop() + 70;
-	    $('.menu a').each(function () {
-	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.menu li').removeClass("active");
-	            currLink.parent().addClass("active");
-	        }
-	        else{
-	            currLink.parent().removeClass("active");
-	        }
-	    });
-	}
-	$(window).scroll(onScroll);
-    
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop() + 70;
+        $('.menu a').each(function() {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.menu li').removeClass("active");
+                currLink.parent().addClass("active");
+            } else {
+                currLink.parent().removeClass("active");
+            }
+        });
+    }
+    $(window).scroll(onScroll);
+
     //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
+    $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         $(document).off("scroll");
-        
-        $('.menu li').each(function () {
+
+        $('.menu li').each(function() {
             $(this).parent().removeClass('active');
         })
         $(this).addClass('active');
-      
+
         var target = this.hash;
         var menu = target;
         var $target = $(target);
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
-        }, 500, 'swing', function () {
+        }, 500, 'swing', function() {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
         });
     });
-    
-// ---------- MEDIUM INTEGRATION API ---------- 
+
+    // ---------- MEDIUM INTEGRATION API ---------- 
     $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40BaseCore', function(data) {
 
         // remove team arcile & get three feeds items
         var articles = data.items.filter(element => element.title !== "BaseCore Team: we create an investment tool of the new generation.").slice(0, 3);
-        articles.forEach( function(element, index) {
+        articles.forEach(function(element, index) {
             let description = element.description.split('p>')[1].split('</p')[0].substr(0, 100);
             description = description.substring(0, description.lastIndexOf(" "));
 
@@ -103,28 +102,28 @@ $(function () {
 
 
     if (window.innerWidth <= 425) {
-    	$('.features__list').slick({
-    		slidesToShow: 1	,
-    		slidesToScroll: 1,
-    		arrows: false,
-    		loop: true,
-    		centerMode: true,
-    	})
+        $('.features__list').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            loop: true,
+            centerMode: true,
+        })
+        $('.footer__list').each(function(index, el) {
+            $(this).find('ul').slideUp(1)
+        });
+
+        $('.footer__list h4').click(function() {
+            $(this).siblings('ul').slideToggle(400);
+        })
     }
-// ---------- BURGER KING MENU ----------
-    $('#burger-king').click(function(event){
+    // ---------- BURGER KING MENU ----------
+    $('#burger-king').click(function(event) {
         $('.top-menu').toggleClass('active')
     })
 
 
     // footer slids
-    $('.footer__list').each(function(index, el) {
-        $(this).find('ul').slideUp(1)
-    });
 
-    $('.footer__list h4').click(function(){
-        $(this).siblings('ul').slideToggle(400);
-    })
 
 })
-

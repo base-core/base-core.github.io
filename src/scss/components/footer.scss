@@ -58,6 +58,10 @@
     cursor: pointer;
 }
 
+.company-info {
+    margin-bottom: 20px;
+}
+
 .form__subscribe {
     margin-bottom: 56px;
 }
@@ -75,23 +79,57 @@ a.sprite {
     background-repeat: no-repeat;
 }
 
-    .soc-mdm {background-position-y: 0px;}
-    .soc-git {background-position-y: -34px;}
-    .soc-tlgrm {background-position-y: -68px;}
-    .soc-twit {background-position-y: -101px;}
-    .soc-ytube {background-position-y: -136px;}
-    .soc-btt {background-position-y: -170px;}
-    .soc-red {background-position-y: -204px;}
-    .soc-fbook {background-position-y: -238px;}
-    .soc-ln {background-position-y: -272px;}
-    .soc-inst {background-position-y: -306px;}
+.soc-mdm {
+    background-position-y: 0px;
+}
 
-    // ---------- ADAPTIVE ----------
-    @media screen and (max-width: 375px) {
-     .footer-right {
-        display: flex;
-        flex-wrap: wrap;
+.soc-git {
+    background-position-y: -34px;
+}
+
+.soc-tlgrm {
+    background-position-y: -68px;
+}
+
+.soc-twit {
+    background-position-y: -101px;
+}
+
+.soc-ytube {
+    background-position-y: -136px;
+}
+
+.soc-btt {
+    background-position-y: -170px;
+}
+
+.soc-red {
+    background-position-y: -204px;
+}
+
+.soc-fbook {
+    background-position-y: -238px;
+}
+
+.soc-ln {
+    background-position-y: -272px;
+}
+
+.soc-inst {
+    background-position-y: -306px;
+} // ---------- ADAPTIVE ----------
+@media screen and (max-width: 425px) {
+    .footer-container {
         justify-content: center;
-        align-items:center;
-     }
+        align-items: center;
     }
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form__subscribe {
+        margin-bottom: 30px;
+    }
+}
