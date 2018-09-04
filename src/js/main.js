@@ -59,7 +59,7 @@ $(function() {
     $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40BaseCore', function(data) {
 
         // remove team arcile & get three feeds items
-        var articles = data.items.filter(element => element.title !== "BaseCore Team: we create an investment tool of the new generation.").slice(0, 3);
+        var articles = data.items.filter(element => element.title !== "BaseCore Team: We create an investment tool of the new generation.").slice(0, 3);
         articles.forEach(function(element, index) {
             let description = element.description.split('p>')[1].split('</p')[0].substr(0, 100);
             description = description.substring(0, description.lastIndexOf(" "));
@@ -78,7 +78,7 @@ $(function() {
         });
 
         // get team article 
-        var teamArticle = data.items.find(element => element.title == "BaseCore Team: we create an investment tool of the new generation.");
+        var teamArticle = data.items.find(element => element.title == "BaseCore Team: We create an investment tool of the new generation.");
         teamArticle.description = teamArticle.description.split('p>')[1].split('</p')[0].substr(0, 100);
 
         // article template
