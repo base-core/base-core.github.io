@@ -168,8 +168,12 @@
         align-items: center;
         margin-right: 0px;
     }
+    .header-btn-container {
+        display: flex;
+        flex: 1 100%;
+    }
     .header-button {
-    margin: 10px 37px 20px 0px;
+    margin: 9px 37px 20px 0px;
     }
     .homebtn {
         display: block;
