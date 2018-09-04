@@ -105,7 +105,7 @@ $(function() {
             $('.about_team').append(` <div><img class="about_team__photo" src="${teamArticle.thumbnail}"></div>
                 <div class="about_team__info">
                     <div class="about_team__header">
-                        <h2><a href="${teamArticle.link}">${teamArticle.title}</a></h2>
+                        <h2 class="--align-text_left"><a href="${teamArticle.link}">${teamArticle.title}</a></h2>
                     </div>
                     <div class="about_team__text">
                         <p>${teamArticle.description}...</p>
