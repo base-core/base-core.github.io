@@ -118,12 +118,34 @@ a.sprite {
 .soc-inst {
     background-position-y: -306px;
 } // ---------- ADAPTIVE ----------
+@media screen and (max-width: 768px) {
+    .input-join {
+        width: 200px;
+        border-radius: 5px;
+        border: 1px solid #201a2b;
+        box-sizing: border-box;
+        padding: 8px 46px;
+        background: url('../img/mail-logo.svg') no-repeat 10px center;
+        margin-bottom: 10px;
+    }
+    .footer-left {
+        flex: 1;
+    }
+    .footer-right {
+        flex: 3;
+        margin-left: 25px;
+    }
+
+}
+
 @media screen and (max-width: 425px) {
     .footer-triangle {
-        
+
         position: relative;
         &.active {
-            &:after {transform: rotate(0deg)}
+            &:after {
+                transform: rotate(0deg)
+            }
         }
         &:after {
             transition: 0.3s ease-in-out;
@@ -143,9 +165,9 @@ a.sprite {
         justify-content: center;
         align-items: center;
     }
-    .footer-right, 
-    .footer__community, 
-    .footer__documentation, 
+    .footer-right,
+    .footer__community,
+    .footer__documentation,
     .footer__organization {
         display: flex;
         justify-content: center;

@@ -71,6 +71,20 @@
         margin-top: 0px;
     }
 }
+@media screen and (max-width: 768px) {
+    #banner-image {
+        width: 550px;
+    }
+    .banner__img {
+        margin-top: 0px;
+        svg {
+            margin: 0 auto;
+        }
+    }
+    .banner__title {
+        margin-top: 10px;
+    }
+}
 
 @media screen and (max-width: 425px) {
     #banner-image {

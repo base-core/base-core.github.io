@@ -30,6 +30,12 @@
 }
 
 // ---------- ADAPTIVE ----------
+@media screen and (max-width: 768px) {
+    .wp-description {
+        padding: 0px 30px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .whitepaper-container {
         padding: 5px 0px 50px;

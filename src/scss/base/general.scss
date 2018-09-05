@@ -127,6 +127,36 @@ ul {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 95vw;
+    }
+body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 13px;
+    }
+    .features .features__item {
+        font-size: 13px;
+    }
+    .footer .footer-right {
+        font-size: 13px;
+    }
+    .footer .company-info {
+        font-size: 13px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .wrapper {
         width: 95vw;
