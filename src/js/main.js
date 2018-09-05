@@ -56,10 +56,12 @@ $(function() {
     });
 
     // ---------- MEDIUM INTEGRATION API ---------- 
-    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fbscrinc%2F', function(data) {
-
+    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fbscrinc', function(data) {
         // init arr with articles
         var articlesList = data.items;
+
+
+        console.log(articlesList)
 
 
         // // sort by date
@@ -78,7 +80,7 @@ $(function() {
 
             // template for display articles
             $('.medium__container').append(`<div class="medium__publication --medium-padding">
-                    <div class="medium__publication__photo"><img width="318px" src="${element.thumbnail}"></div>
+                    <div class="medium__publication__photo"><a href="${element.link}" style="background-image: url(${element.thumbnail})"></a></div>
                     <h4 class="publication__title"><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
                     <div class="medium__publication__article">
                         <p>${description}...</p>
@@ -92,9 +94,10 @@ $(function() {
         // get team article 
         var teamArticle = articlesList.find(element => element.title == "BaseCore Team: We create an investment tool of the new generation.");
         teamArticle.description = teamArticle.description.split('p>')[1].split('</p')[0].substr(0, 100);
+        teamArticle.description = teamArticle.description.substring(0, teamArticle.description.lastIndexOf(" "));
 
         // article template
-        $('.about_team').append(` <div><img class="about_team__photo" src="${teamArticle.thumbnail}"></div>
+        $('.about_team').append(`<div class="about_team__photo"><a href="${teamArticle.link}" style="background-image: url(${teamArticle.thumbnail})"></a></div>
                 <div class="about_team__info">
                     <div class="about_team__header">
                         <h2 class="--align-text_left"><a href="${teamArticle.link}">${teamArticle.title}</a></h2>
