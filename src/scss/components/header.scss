@@ -151,10 +151,12 @@
         align-items: center;
         width: 150px;
         padding: 5px 10px;
-        right: -5px;
+        right: 0px;
         p {
             margin-right: 10px;
             color: $white;
+            font-size: 15px;
+            font-weight: bold;
         }
     }
     &:hover {
