@@ -2,7 +2,7 @@
     padding-top: 70px;
     background-image: url('/img/hp-bg.svg');
     background-position: center;
-    background-position-y: 70px; 
+    background-position-y: 70px;
     background-repeat: no-repeat;
     text-align: center;
     min-height: 100vh;
@@ -61,16 +61,22 @@
 
 // ---------- ADAPTIVE ----------
 @media screen and (max-width: 1440px) {
+
     #banner-image {
         width: 513px;
     }
     .banner {
         padding-top: 10px;
+        background-position: center;
+        background-position-y: 25px;
+        background-repeat: no-repeat
     }
+
     .banner__title {
         margin-top: 0px;
     }
 }
+
 @media screen and (max-width: 768px) {
     #banner-image {
         width: 550px;
