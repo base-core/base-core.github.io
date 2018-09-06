@@ -8,6 +8,7 @@
     z-index: 2;
     font-size: $headerfsize;
 }
+
 #burger-king {
     display: none;
     cursor: pointer;
@@ -79,9 +80,9 @@
 }
 
 .header-button {
-	margin: 23px 23px 23px 4px;
+    margin: 23px 23px 23px 4px;
     position: relative;
-    &:after{
+    &:after {
         transition: 0.2s;
         content: '';
         position: absolute;
@@ -89,10 +90,11 @@
         left: 0;
         width: 0%;
         height: 1px;
-        background: #0195a1;;
+        background: #0195a1;
+        ;
     }
-    &:hover{
-        &:after{
+    &:hover {
+        &:after {
             width: 100%;
         }
     }
@@ -133,6 +135,33 @@
     display: none;
 }
 
+.telegram-feedback {
+    transition: 0.3s;
+    width: 55px;
+    height: 45px;
+    background-color: #858fa6;
+    border-radius: 32px 0 0 32px;
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    overflow: hidden;
+    .feedback__btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 150px;
+        padding: 5px 10px;
+        right: -5px;
+        p {
+            margin-right: 10px;
+            color: $white;
+        }
+    }
+    &:hover {
+        width: 185px;
+    }
+}
+
 
 // ---------- ADAPTIVE ----------
 @media screen and (max-width: 1440px) {
@@ -158,7 +187,6 @@
         transition: 0.3s ease-in-out;
         &.active {
             height: 125px;
-
         }
     }
     .main-logo {
@@ -173,7 +201,7 @@
         flex: 1 100%;
     }
     .header-button {
-    margin: 9px 37px 20px 0px;
+        margin: 9px 37px 20px 0px;
     }
     .homebtn {
         display: block;
@@ -204,7 +232,6 @@
         transition: 0.3s ease-in-out;
         &.active {
             height: 125px;
-
         }
     }
     .main-logo {
@@ -219,7 +246,7 @@
         flex: 1 100%;
     }
     .header-button {
-    margin: 9px 37px 20px 0px;
+        margin: 9px 37px 20px 0px;
     }
     .homebtn {
         display: block;
@@ -233,5 +260,8 @@
     .menu-right__container {
         flex-wrap: wrap;
         align-items: left;
+    }
+    .telegram-feedback {
+        display: none;
     }
 }
