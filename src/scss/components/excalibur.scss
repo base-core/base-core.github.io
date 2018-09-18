@@ -32,6 +32,7 @@
         margin-bottom: 25px;
     }
     .excalibur-invite-btn {
+    	font-family: "Roboto Mono";
         width: 201px;
         height: 34px;
         border-radius: 5px;
@@ -40,6 +41,7 @@
         text-decoration: none;
         color: $white;
         font-size: 16px;
+        font-weight: 700;
     }
 }
 
@@ -62,6 +64,8 @@
         transform: translate(-50%, -50%);
     }
     .excalibur-api-btn {
+    	font-family: "Roboto Mono";
+    	font-weight: 700;
         width: 201px;
         height: 34px;
         border-radius: 5px;
