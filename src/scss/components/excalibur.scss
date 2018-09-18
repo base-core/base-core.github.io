@@ -1,13 +1,15 @@
 .excalibur {
     background-color: #202020;
-}
-
-.excalibur-containter {
-    text-align: center;
     color: $white;
+    text-align: center;
     h2 {
         padding: 30px 0px;
     }
+}
+
+.excalibur-containter {
+    display: flex;
+    padding: 0px 0px 40px;
 }
 
 .excalibur-left {
@@ -48,11 +50,18 @@
     width: 395px;
     height: 300px;
 
-    .excalibur-api-bckgrnd {
-    	padding: 8px 107px 8px 27px;
+    .excalibur-api-background {
+    	padding: 8px 107px 7px 27px;
     }
-}
-
-@media screen and (max-width: 1440px) {
-
+    .excalibur-api-btn {
+    	
+        width: 201px;
+        height: 34px;
+        border-radius: 5px;
+        background-color: #ef5777;
+        padding: 8px 48px;
+        text-decoration: none;
+        color: $white;
+        font-size: 16px;
+    }
 }
