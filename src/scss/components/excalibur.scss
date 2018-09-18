@@ -1,0 +1,58 @@
+.excalibur {
+    background-color: #202020;
+}
+
+.excalibur-containter {
+    text-align: center;
+    color: $white;
+    h2 {
+        padding: 30px 0px;
+    }
+}
+
+.excalibur-left {
+    background-color: #282828;
+    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 595px;
+    height: 300px;
+
+    .excalibur-logo {
+        margin-bottom: 10px;
+    }
+
+    .excalibur-about {
+        color: $white;
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .excalibur-invite-btn {
+        width: 201px;
+        height: 34px;
+        border-radius: 5px;
+        background-color: #1fbe5c;
+        padding: 8px 52px;
+        text-decoration: none;
+        color: $white;
+        font-size: 16px;
+    }
+}
+
+.excalibur-right {
+    background-color: #282828;
+    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    width: 395px;
+    height: 300px;
+
+    .excalibur-api-bckgrnd {
+    	padding: 8px 107px 8px 27px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+}
