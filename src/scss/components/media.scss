@@ -7,6 +7,14 @@
 .media__container {
     padding: 0px 0px 25px;
     background-color: $white;
+    .all_publication {
+        text-align: right;
+        padding-right: 25px;
+        a{
+        text-decoration: none;
+        color: $primary;
+        }
+    }
 }
 
 .media__title {
