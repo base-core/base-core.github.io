@@ -18,6 +18,10 @@
     flex: 0 0;
     margin-right: 68px;
 }
+.menu-element .menu--home {
+    color: $primary;
+    font-weight: bold;
+}
 
 .top-menu {
     display: flex;
@@ -55,7 +59,7 @@
 }
 
 .menu {
-    width: 490px;
+    width: 539px;
     justify-content: space-between;
 }
 

@@ -11,9 +11,11 @@
         margin-right: 15px;
     }
 }
-
 .footer-logo {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-right {
@@ -59,11 +61,13 @@
 }
 
 .company-info {
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .form__subscribe {
     margin-bottom: 56px;
+    text-align: center;
 }
 
 a.sprite {
