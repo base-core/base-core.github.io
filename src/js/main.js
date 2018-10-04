@@ -33,7 +33,7 @@ function onYouTubeIframeAPIReady() {
         activeClass = 'is-active';
       }
       console.log(id)
-     $('.playlist-thumbs').append(`<li data-video-id="${id}" class="video-thumb ${activeClass}"><img src="https://img.youtube.com/vi/${id}/default.jpg"/></li>`)
+     $('.playlist-thumbs').append(`<li data-video-id="${id}" class="video-thumb ${activeClass}"><img class="video-thumb-img" src="https://img.youtube.com/vi/${id}/default.jpg"/></li>`)
     });
 
     videoThumbs = $('.video-thumb');

@@ -21,11 +21,15 @@
 	align-items: center;
 	justify-content: flex-start;
 	position: relative;
-	padding: 0 50px;
+	padding: 0 40px;
 
 	.video-thumb {
-		margin-right: 25px;
+		margin-right: 15px;
 		cursor: pointer;
+		  .video-thumb-img:hover {
+    
+    box-shadow: 0 0 10px 2px black;
+  }
 	}
 }
 
@@ -48,7 +52,6 @@
 }
 
 .video-sect__video{
-	margin: 50px 0px;
 	position: relative;
 	width: 100%;
 	height: 0;
@@ -68,9 +71,7 @@
 	.video-sect__container{
 	padding: 15px;
 }
-	.video-sect__video{
-	margin: 25px 0px 50px;
-	}
+	
 }	
 
 @media screen and (max-width: 768px) {
