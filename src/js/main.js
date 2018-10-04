@@ -20,7 +20,7 @@ $('.slider-nav').slick({
 
 
 function onYouTubeIframeAPIReady() {
-    var videos = [ '7rfMe-2v68A', 'D68lxY-8wPA', 'VULKzVZCso0', 'L5eNAWbn6mQ', 'MFjcKxx-h7Y' ];
+    var videos = [ 'd7tVc91x0Vs', 'MEN7M1XjE7A' ];
     var playlistThumbs = $('.playlist-thumbs');
     var prevBtn = $('#prev');
     var nextBtn = $('#next');

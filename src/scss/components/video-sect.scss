@@ -12,6 +12,40 @@
 	align-items: center;
 	padding: 26px;
 }
+.video--youtube--dymanic {
+	width: 100%;
+}
+
+.playlist-thumbs {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	padding: 0 50px;
+
+	.video-thumb {
+		margin-right: 25px;
+		cursor: pointer;
+	}
+}
+
+.arrows {
+	position: absolute;
+	border: none;
+	background: none;
+	outline: none;
+	img {
+		width: 20px;
+	}
+	&#prev {
+		transform: scale(-1, 1);
+		left: 0;		
+	}
+	&#next {
+		right: 0;
+	}
+
+}
 
 .video-sect__video{
 	margin: 50px 0px;
