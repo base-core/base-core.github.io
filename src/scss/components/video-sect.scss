@@ -21,7 +21,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	position: relative;
-	padding: 0 40px;
+	padding: 10px 40px;
 
 	.video-thumb {
 		margin-right: 15px;
@@ -70,6 +70,9 @@
 @media screen and (max-width: 1440px) {
 	.video-sect__container{
 	padding: 15px;
+}
+.video--youtube--dymanic {
+	margin: 25px;
 }
 	
 }	
