@@ -82,13 +82,13 @@ function onYouTubeIframeAPIReady() {
     }
 
     function playNextVideo() {
-      currentIndex += 1;
+      currentIndex = currentIndex == videos.length - 1 ? 0 : currentIndex + 1;
       player.loadVideoById(videos[currentIndex], 0, "large");
       playlistThumbs.find(`[data-video-id="${videos[currentIndex]}"]`).addClass('is-active').siblings().removeClass('is-active');
     }
 
     function playPrevVideo() {
-        currentIndex -= 1;
+        currentIndex = currentIndex == 0 ? videos.length - 1 : currentIndex - 1;
         player.loadVideoById(videos[currentIndex], 0, "large");
         playlistThumbs.find(`[data-video-id="${videos[currentIndex]}"]`).addClass('is-active').siblings().removeClass('is-active');
     }
