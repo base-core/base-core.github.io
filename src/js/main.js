@@ -2,6 +2,15 @@
 
 //= banner-animation.js
 
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-124741047-1', 'auto');
+ga('send', 'pageview');
+
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -76,8 +85,16 @@ function onYouTubeIframeAPIReady() {
     }
 
     function onPlayerStateChange(event) {
+        console.log(event)
       if ( event.data === 0 ) { // video ended
         playNextVideo();
+      }else if(event.data === 1) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Videos',
+          eventAction: 'play',
+          eventLabel: 'Fall Campaign'
+        });
       }
     }
 
@@ -144,9 +161,9 @@ $(function() {
 
         // // sort by date
         // articlesList.sort(function(a, b) {
-        //     a = new Date(a.pubDate);
-        //     b = new Date(b.pubDate);
-        //     return a > b ? -1 : a < b ? 1 : 0;
+        //   a = new Date(a.pubDate);
+        //   b = new Date(b.pubDate);
+        //   return a > b ? -1 : a < b ? 1 : 0;
         // });
 
 
