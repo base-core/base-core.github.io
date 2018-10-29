@@ -3,10 +3,17 @@
 //= banner-animation.js
 
 
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 ga('create', 'UA-124741047-1', 'auto');
 ga('send', 'pageview');
@@ -29,50 +36,51 @@ $('.slider-nav').slick({
 
 
 function onYouTubeIframeAPIReady() {
-    var videos = [ 'd7tVc91x0Vs', 'MEN7M1XjE7A' ];
+    var videos = ['d7tVc91x0Vs', 'MEN7M1XjE7A'];
     var playlistThumbs = $('.playlist-thumbs');
     var prevBtn = $('#prev');
     var nextBtn = $('#next');
     var videoThumbs;
     var currentIndex = 0;
 
-    videos.forEach(function(id, i){
-      var activeClass = '';
-      if ( i === currentIndex ) {
-        activeClass = 'is-active';
-      }
-      console.log(id)
-     $('.playlist-thumbs').append(`<li data-video-id="${id}" class="video-thumb ${activeClass}"><img class="video-thumb-img" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"/></li>`)
+    videos.forEach(function(id, i) {
+        var activeClass = '';
+        if (i === currentIndex) {
+            activeClass = 'is-active';
+        }
+        console.log(id)
+        $('.playlist-thumbs').append(`<li data-video-id="${id}" class="video-thumb ${activeClass}"><img class="video-thumb-img" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"/></li>`)
     });
 
     videoThumbs = $('.video-thumb');
 
-    videoThumbs.click(function(){
-      currentIndex = videos.indexOf($(this).attr('data-video-id'));
-      player.loadVideoById(videos[currentIndex], 0, "large");
-      $(this).addClass('is-active').siblings().removeClass('is-active');
-      
+    videoThumbs.click(function() {
+        currentIndex = videos.indexOf($(this).attr('data-video-id'));
+        player.loadVideoById(videos[currentIndex], 0, "large");
+        $(this).addClass('is-active').siblings().removeClass('is-active');
+
     })
 
     initPlayer(videos[currentIndex]);
 
 
     var player;
+
     function initPlayer(id) {
-      console.log('initPlayer');
-      // This function creates an <iframe> (and YouTube player) after the API code downloads.
-      player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: id,
-        playerVars: {
-            autoplay: 0,
-        },
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
+        console.log('initPlayer');
+        // This function creates an <iframe> (and YouTube player) after the API code downloads.
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: id,
+            playerVars: {
+                autoplay: 0,
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
     }
 
     prevBtn.on('click', playPrevVideo);
@@ -80,28 +88,28 @@ function onYouTubeIframeAPIReady() {
 
     // The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-      console.log('onPlayerREady', event);
-      // event.target.playVideo();
+        console.log('onPlayerREady', event);
+        // event.target.playVideo();
     }
 
     function onPlayerStateChange(event) {
         console.log(event)
-      if ( event.data === 0 ) { // video ended
-        playNextVideo();
-      }else if(event.data === 1) {
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Videos',
-          eventAction: 'play',
-          eventLabel: 'Fall Campaign'
-        });
-      }
+        if (event.data === 0) { // video ended
+            playNextVideo();
+        } else if (event.data === 1) {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Videos',
+                eventAction: 'play',
+                eventLabel: 'Fall Campaign'
+            });
+        }
     }
 
     function playNextVideo() {
-      currentIndex = currentIndex == videos.length - 1 ? 0 : currentIndex + 1;
-      player.loadVideoById(videos[currentIndex], 0, "large");
-      playlistThumbs.find(`[data-video-id="${videos[currentIndex]}"]`).addClass('is-active').siblings().removeClass('is-active');
+        currentIndex = currentIndex == videos.length - 1 ? 0 : currentIndex + 1;
+        player.loadVideoById(videos[currentIndex], 0, "large");
+        playlistThumbs.find(`[data-video-id="${videos[currentIndex]}"]`).addClass('is-active').siblings().removeClass('is-active');
     }
 
     function playPrevVideo() {
@@ -202,9 +210,6 @@ $(function() {
                         <p><a href="${teamArticle.link}">Read More...</a></p>
                     </div>
                 </div>`)
-
-
-
     });
 
 
