@@ -21,50 +21,51 @@ $('.slider-nav').slick({
 
 
 function onYouTubeIframeAPIReady() {
-    var videos = [ 'd7tVc91x0Vs', 'MEN7M1XjE7A' ];
+    var videos = ['d7tVc91x0Vs', 'MEN7M1XjE7A'];
     var playlistThumbs = $('.playlist-thumbs');
     var prevBtn = $('#prev');
     var nextBtn = $('#next');
     var videoThumbs;
     var currentIndex = 0;
 
-    videos.forEach(function(id, i){
-      var activeClass = '';
-      if ( i === currentIndex ) {
-        activeClass = 'is-active';
-      }
-      console.log(id)
-     $('.playlist-thumbs').append(`<li data-video-id="${id}" class="video-thumb ${activeClass}"><img class="video-thumb-img" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"/></li>`)
+    videos.forEach(function(id, i) {
+        var activeClass = '';
+        if (i === currentIndex) {
+            activeClass = 'is-active';
+        }
+        console.log(id)
+        $('.playlist-thumbs').append(`<li data-video-id="${id}" class="video-thumb ${activeClass}"><img class="video-thumb-img" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"/></li>`)
     });
 
     videoThumbs = $('.video-thumb');
 
-    videoThumbs.click(function(){
-      currentIndex = videos.indexOf($(this).attr('data-video-id'));
-      player.loadVideoById(videos[currentIndex], 0, "large");
-      $(this).addClass('is-active').siblings().removeClass('is-active');
-      
+    videoThumbs.click(function() {
+        currentIndex = videos.indexOf($(this).attr('data-video-id'));
+        player.loadVideoById(videos[currentIndex], 0, "large");
+        $(this).addClass('is-active').siblings().removeClass('is-active');
+
     })
 
     initPlayer(videos[currentIndex]);
 
 
     var player;
+
     function initPlayer(id) {
-      console.log('initPlayer');
-      // This function creates an <iframe> (and YouTube player) after the API code downloads.
-      player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: id,
-        playerVars: {
-            autoplay: 0,
-        },
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
+        console.log('initPlayer');
+        // This function creates an <iframe> (and YouTube player) after the API code downloads.
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: id,
+            playerVars: {
+                autoplay: 0,
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
     }
 
     prevBtn.on('click', playPrevVideo);
@@ -72,28 +73,28 @@ function onYouTubeIframeAPIReady() {
 
     // The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-      console.log('onPlayerREady', event);
-      // event.target.playVideo();
+        console.log('onPlayerREady', event);
+        // event.target.playVideo();
     }
 
     function onPlayerStateChange(event) {
         console.log(event)
-      if ( event.data === 0 ) { // video ended
-        playNextVideo();
-      }else if(event.data === 1) {
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Videos',
-          eventAction: 'play',
-          eventLabel: 'Fall Campaign'
-        });
-      }
+        if (event.data === 0) { // video ended
+            playNextVideo();
+        } else if (event.data === 1) {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Videos',
+                eventAction: 'play',
+                eventLabel: 'Fall Campaign'
+            });
+        }
     }
 
     function playNextVideo() {
-      currentIndex = currentIndex == videos.length - 1 ? 0 : currentIndex + 1;
-      player.loadVideoById(videos[currentIndex], 0, "large");
-      playlistThumbs.find(`[data-video-id="${videos[currentIndex]}"]`).addClass('is-active').siblings().removeClass('is-active');
+        currentIndex = currentIndex == videos.length - 1 ? 0 : currentIndex + 1;
+        player.loadVideoById(videos[currentIndex], 0, "large");
+        playlistThumbs.find(`[data-video-id="${videos[currentIndex]}"]`).addClass('is-active').siblings().removeClass('is-active');
     }
 
     function playPrevVideo() {
@@ -143,6 +144,7 @@ $(function() {
     });
 
     // ---------- MEDIUM INTEGRATION API ---------- 
+<<<<<<< HEAD
 
         $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fbscrinc', function(data) {
             // init arr with articles
@@ -186,6 +188,60 @@ $(function() {
                     </div>`)
             });
 
+=======
+    $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fbscrinc', function(data) {
+        // init arr with articles
+        var articlesList = data.items;
+
+
+        console.log(articlesList)
+
+
+        // // sort by date
+        // articlesList.sort(function(a, b) {
+        //   a = new Date(a.pubDate);
+        //   b = new Date(b.pubDate);
+        //   return a > b ? -1 : a < b ? 1 : 0;
+        // });
+
+
+        // remove team arcile & get three feeds items
+        var articles = articlesList.filter(element => element.title !== "BaseCore Team: We create an investment tool of the new generation.").slice(0, 3);
+        articles.forEach(function(element, index) {
+            let description = element.description.split('p>')[1].split('</p')[0].substr(0, 100);
+            description = description.substring(0, description.lastIndexOf(" "));
+
+            // template for display articles
+            $('.medium__container').append(`<div class="medium__publication --medium-padding">
+                    <div class="medium__publication__photo"><a href="${element.link}" style="background-image: url(${element.thumbnail})"></a></div>
+                    <h4 class="publication__title"><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
+                    <div class="medium__publication__article">
+                        <p>${description}...</p>
+                    </div>
+                    <div class="link">
+                        <p><a class="details" target="_blank" href="${element.link}">Read more...</a></p>
+                    </div>
+                </div>`)
+        });
+
+        // get team article 
+        var teamArticle = articlesList.find(element => element.title == "BaseCore Team: We create an investment tool of the new generation.");
+        teamArticle.description = teamArticle.description.split('p>')[1].split('</p')[0].substr(0, 100);
+        teamArticle.description = teamArticle.description.substring(0, teamArticle.description.lastIndexOf(" "));
+
+        // article template
+        $('.about_team').append(`<div class="about_team__photo"><a href="${teamArticle.link}" style="background-image: url(${teamArticle.thumbnail})"></a></div>
+                <div class="about_team__info">
+                    <div class="about_team__header">
+                        <h2 class="--align-text_left"><a href="${teamArticle.link}">${teamArticle.title}</a></h2>
+                    </div>
+                    <div class="about_team__text">
+                        <p>${teamArticle.description}...</p>
+                        <p><a href="${teamArticle.link}">Read More...</a></p>
+                    </div>
+                </div>`)
+    });
+>>>>>>> 943833f883a57bf201fba224053b1ec594c3bcda
 
 
 
