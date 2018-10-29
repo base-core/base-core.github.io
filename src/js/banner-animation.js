@@ -203,4 +203,4 @@ function moveCubes(cube, coin, boxCube, boxCoin){
   })
 }
 setTimeout(moveCubes, 8000, '.cube1', '.coin1', '.box-cube1', '.box-coin1')
-moveCubes('.cube', '.coin', '.box-cube', '.box-coin')
+// moveCubes('.cube', '.coin', '.box-cube', '.box-coin')
