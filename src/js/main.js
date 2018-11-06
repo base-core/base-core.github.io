@@ -148,43 +148,49 @@ $(function() {
         $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fbscrinc', function(data) {
             // init arr with articles
             var articlesList = data.items;
-            console.log(articlesList)
+
+            //get roadmap article
+            var roadmap = articlesList.filter(el => el.title == "BaseCore Roadmap")[0];
+            console.log(roadmap)
 
             // remove team arcile & get three feeds items
-            var articles = articlesList.filter(element => element.title !== "BaseCore Team: We create an investment tool of the new generation.").slice(0, 3);
-            articles.forEach(function(element, index) {
-                let description = element.description.split('p>')[1].split('</p')[0].substr(0, 100);
+            var articles = articlesList.filter(el => el.title !== "BaseCore Team: We create an investment tool of the new generation." && el.title !== "BaseCore Roadmap").slice(0, 2);
+            articles.unshift(roadmap);
+
+            console.log(articles)
+            articles.forEach(function(el, index) {
+                let description = el.description.split('p>')[1].split('</p')[0].substr(0, 100);
                 description = description.substring(0, description.lastIndexOf(" "));
 
                 // template for display articles
                 $('.medium__container').append(`<div class="medium__publication --medium-padding">
-                        <div class="medium__publication__photo"><a href="${element.link}" style="background-image: url(${element.thumbnail})"></a></div>
-                        <h4 class="publication__title"><a href="${element.link}" class="medium__publication__header">${element.title}</a></h4>
+                        <div class="medium__publication__photo"><a href="${el.link}" style="background-image: url(${el.thumbnail})"></a></div>
+                        <h4 class="publication__title"><a href="${el.link}" class="medium__publication__header">${el.title}</a></h4>
                         <div class="medium__publication__article">
                             <p>${description}...</p>
                         </div>
                         <div class="link">
-                            <p><a class="details" target="_blank" href="${element.link}">Read more...</a></p>
+                            <p><a class="details" target="_blank" href="${el.link}">Read more...</a></p>
                         </div>
                     </div>`)
             });
 
             // get team article 
-            var teamArticle = articlesList.find(element => element.title == "BaseCore Team: We create an investment tool of the new generation.");
+            var teamArticle = articlesList.find(el => el.title == "BaseCore Team: We create an investment tool of the new generation.")
             teamArticle.description = teamArticle.description.split('p>')[1].split('</p')[0].substr(0, 100);
             teamArticle.description = teamArticle.description.substring(0, teamArticle.description.lastIndexOf(" "));
 
             // article template
             $('.about_team').append(`<div class="about_team__photo"><a href="${teamArticle.link}" style="background-image: url(${teamArticle.thumbnail})"></a></div>
-                    <div class="about_team__info">
-                        <div class="about_team__header">
-                            <h2 class="--align-text_left"><a href="${teamArticle.link}">${teamArticle.title}</a></h2>
-                        </div>
-                        <div class="about_team__text">
-                            <p>${teamArticle.description}...</p>
-                            <p><a href="${teamArticle.link}">Read More...</a></p>
-                        </div>
-                    </div>`)
+                <div class="about_team__info">
+                    <div class="about_team__header">
+                        <h2 class="--align-text_left"><a href="${teamArticle.link}">${teamArticle.title}</a></h2>
+                    </div>
+                    <div class="about_team__text">
+                        <p>${teamArticle.description}...</p>
+                        <p><a href="${teamArticle.link}">Read More...</a></p>
+                    </div>
+                </div>`)
             });
 
 
