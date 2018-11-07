@@ -151,13 +151,10 @@ $(function() {
 
             //get roadmap article
             var roadmap = articlesList.filter(el => el.title == "BaseCore Roadmap")[0];
-            console.log(roadmap)
-
             // remove team arcile & get three feeds items
             var articles = articlesList.filter(el => el.title !== "BaseCore Team: We create an investment tool of the new generation." && el.title !== "BaseCore Roadmap").slice(0, 2);
             articles.unshift(roadmap);
 
-            console.log(articles)
             articles.forEach(function(el, index) {
                 let description = el.description.split('p>')[1].split('</p')[0].substr(0, 100);
                 description = description.substring(0, description.lastIndexOf(" "));
